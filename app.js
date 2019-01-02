@@ -14,6 +14,12 @@ app.get(`/dog`, function(req, res){
     res.send(`meowww`)
 })
 
+//non-existent route 
+app.get(`*`, function(req, res){
+    res.send(`this route doesn't exist!`)
+})
+
 app.listen(3000, function(){
     console.log(`server has started`)
 })
+
