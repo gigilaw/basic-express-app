@@ -14,6 +14,12 @@ app.get(`/dog`, function(req, res){
     res.send(`meowww`)
 })
 
+//create dynamic subreddit
+app.get(`/r/:subredditName`, function(req, res){
+    var subReddit = req.params.subredditName
+    res.send(`Welcome to ${subReddit} subReddit!`)
+})
+
 //non-existent route 
 app.get(`*`, function(req, res){
     res.send(`this route doesn't exist!`)
